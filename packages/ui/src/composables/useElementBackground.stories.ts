@@ -3,9 +3,8 @@ import { useElementBackground } from './useElementBackground'
 import { useCurrentElement } from './useCurrentElement'
 import { VaButton } from '../components/va-button'
 import UseElementBackgroundDummy from './UseElementBackgroundDummy.vue'
-import { within } from '@storybook/testing-library'
+import { within, expect } from '@storybook/test'
 import { sleep } from '../utils/sleep'
-import { expect } from '@storybook/jest'
 import { StoryFn } from '@storybook/vue3'
 
 export default {

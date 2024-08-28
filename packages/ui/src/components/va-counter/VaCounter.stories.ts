@@ -1,6 +1,6 @@
 import { addText } from '../../../.storybook/interaction-utils/addText'
 import { userEvent } from '../../../.storybook/interaction-utils/userEvent'
-import { expect } from '@storybook/jest'
+import { expect } from '@storybook/test'
 import VaCounter from './VaCounter.vue'
 import { StoryFn } from '@storybook/vue3'
 import { defineStory } from '../../../.storybook/types'

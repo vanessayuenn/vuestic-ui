@@ -2,8 +2,7 @@ import { defineComponent } from 'vue'
 import VaToastDemo from './VaToast.demo.vue'
 import VaToast from './VaToast.vue'
 import { StoryFn } from '@storybook/vue3'
-import { expect } from '@storybook/jest'
-import { useToast } from './index'
+import { expect } from '@storybook/test'
 
 export default {
   title: 'VaToast',

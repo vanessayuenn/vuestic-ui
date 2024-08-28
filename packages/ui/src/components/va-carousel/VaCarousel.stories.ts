@@ -1,8 +1,7 @@
 import { userEvent } from '../../../.storybook/interaction-utils/userEvent'
 import { addText } from '../../../.storybook/interaction-utils/addText'
-import { within } from '@storybook/testing-library'
+import { within, expect } from '@storybook/test'
 import { VaCarousel } from '../va-carousel'
-import { expect } from '@storybook/jest'
 import { sleep } from '../../utils/sleep'
 import { StoryFn } from '@storybook/vue3'
 

@@ -1,8 +1,7 @@
 import { getStoryId, getStoryIdAll, getStorySelector, getStorySelectorAll } from '../../../.storybook/interaction-utils/storySelector'
 import { userEvent } from '../../../.storybook/interaction-utils/userEvent'
-import { fireEvent } from '@storybook/testing-library'
+import { fireEvent, expect } from '@storybook/test'
 import { StoryFn } from '@storybook/vue3'
-import { expect } from '@storybook/jest'
 import { sleep } from '@/utils/sleep'
 import { VaSlider } from './'
 

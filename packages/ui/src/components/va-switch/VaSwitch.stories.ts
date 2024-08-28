@@ -1,4 +1,4 @@
-import { userEvent } from '@storybook/testing-library'
+import { userEvent } from '@storybook/test'
 import { defineComponent } from 'vue'
 import VaSwitchDemo from './VaSwitch.demo.vue'
 import VaSwitch from './VaSwitch.vue'

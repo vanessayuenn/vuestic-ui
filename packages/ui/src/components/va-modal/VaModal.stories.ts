@@ -2,7 +2,7 @@ import { h, ref } from 'vue'
 import { VaModal } from './'
 import VaModalDemos from './VaModal.demo.vue'
 import { StoryFn } from '@storybook/vue3'
-import { expect } from '@storybook/jest'
+import { expect } from '@storybook/test'
 import { userEvent } from '../../../.storybook/interaction-utils/userEvent'
 
 export default {

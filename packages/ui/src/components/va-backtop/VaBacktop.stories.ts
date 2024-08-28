@@ -1,7 +1,6 @@
 import { VaBacktop } from './'
 import { VaRadio } from '../va-radio'
-import { userEvent, within } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { userEvent, within, expect } from '@storybook/test'
 import { sleep } from '../../utils/sleep'
 import { StoryFn } from '@storybook/vue3'
 

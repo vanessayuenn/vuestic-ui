@@ -1,5 +1,5 @@
 import { VaAffix } from './'
-import { expect } from '@storybook/jest'
+import { expect } from '@storybook/test'
 import { StoryFn } from '@storybook/vue3'
 
 export default {

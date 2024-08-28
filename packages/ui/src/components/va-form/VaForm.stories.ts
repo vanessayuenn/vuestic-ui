@@ -1,8 +1,7 @@
 import { StoryFn } from '@storybook/vue3'
 import { userEvent } from '../../../.storybook/interaction-utils/userEvent'
 import { addText } from '../../../.storybook/interaction-utils/addText'
-import { expect } from '@storybook/jest'
-import { within } from '@storybook/testing-library'
+import { expect, within } from '@storybook/test'
 
 import {
   VaForm,
