@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/vue3';
 import { userEvent } from './interaction-utils/userEvent';
 import { sleep } from '../src/utils/sleep';
-import { expect } from '@storybook/jest'
+import { expect } from '@storybook/test'
 import { ComponentPublicInstance, ComponentOptions } from 'vue';
 
 type PlayFn = NonNullable<StoryFn['play']>

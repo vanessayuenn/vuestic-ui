@@ -1,8 +1,7 @@
 import { VaAccordion } from './'
 import { VaCollapse } from '../va-collapse'
 import { StoryFn } from '@storybook/vue3'
-import { within, userEvent } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { within, userEvent, expect } from '@storybook/test'
 import { sleep } from '../../utils/sleep'
 
 export default {

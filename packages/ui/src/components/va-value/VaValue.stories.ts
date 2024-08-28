@@ -1,8 +1,7 @@
 import { VaValue } from '.'
 import { VaInput } from '../va-input'
 import { VaButton } from '../va-button'
-import { within, userEvent } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { within, userEvent, expect } from '@storybook/test'
 import { sleep } from '../../utils/sleep'
 import { StoryFn } from '@storybook/vue3'
 

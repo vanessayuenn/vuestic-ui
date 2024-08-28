@@ -2,8 +2,7 @@ import { StoryFn } from '@storybook/vue3'
 import { defineComponent } from 'vue'
 import VaCollapseDemo from './VaCollapse.demo.vue'
 import { VaCollapse } from './index'
-import { userEvent } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { userEvent, expect } from '@storybook/test'
 
 export default {
   title: 'VaCollapse',

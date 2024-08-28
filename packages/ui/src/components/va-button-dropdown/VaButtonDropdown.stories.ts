@@ -1,7 +1,7 @@
 import { getStorySelector, getStorySelectorAll } from '../../../.storybook/interaction-utils/storySelector'
 import { userEvent } from '../../../.storybook/interaction-utils/userEvent'
 import { StoryFn } from '@storybook/vue3'
-import { expect } from '@storybook/jest'
+import { expect } from '@storybook/test'
 import { VaButtonDropdown } from './'
 
 function getButtonDropdown () {

@@ -1,4 +1,4 @@
-import { userEvent as event } from '@storybook/testing-library'
+import { userEvent as event } from '@storybook/test'
 import { sleep } from '../../src/utils/sleep'
 
 export const userEvent = {

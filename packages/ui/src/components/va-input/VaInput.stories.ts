@@ -1,6 +1,6 @@
 import VaInputDemo from './VaInput.demo.vue'
 import VaInput from './VaInput.vue'
-import { expect } from '@storybook/jest'
+import { expect } from '@storybook/test'
 import type { StoryFn } from '@storybook/vue3'
 import { defineStory } from '../../../.storybook/types'
 
