@@ -36,7 +36,7 @@ Default.play = async ({ canvasElement, step }) => {
   const black = canvas.getByText('black') as HTMLElement
   const white = canvas.getByText('white') as HTMLElement
 
-  await sleep()
+  await sleep(50)
 
   await step('should match white', async () => {
     white.click()

@@ -32,21 +32,21 @@ Default.play = async ({ canvasElement, step }) => {
 
   await step('Opens on click', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'true')
   })
 
   await step('Closes on click', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'false')
   })
 
   await step('Opening another, closes previous', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     userEvent.click(collapses[1])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'false')
     expect(collapses[1]).toHaveAttribute('aria-expanded', 'true')
   })
@@ -76,13 +76,13 @@ Stateful.play = async ({ canvasElement, step }) => {
 
   await step('Should open on click', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'true')
   })
 
   await step('Shouldn\'t open on click', async () => {
     userEvent.click(collapses[1])
-    await sleep()
+    await sleep(50)
     expect(collapses[1]).toHaveAttribute('aria-expanded', 'false')
   })
 }
@@ -126,19 +126,19 @@ DirectCollapseValue.play = async ({ canvasElement, step }) => {
 
   await step('Should close on click', async () => {
     userEvent.click(collapses[1])
-    await sleep()
+    await sleep(50)
     expect(collapses[1]).toHaveAttribute('aria-expanded', 'false')
   })
 
   await step('Should open on click', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'true')
   })
 
   await step('Should close on click', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'false')
   })
 }
@@ -165,9 +165,9 @@ Multiple.play = async ({ canvasElement, step }) => {
 
   await step('Opening another, doesn\'t close previous', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     userEvent.click(collapses[1])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'true')
     expect(collapses[1]).toHaveAttribute('aria-expanded', 'true')
   })
@@ -195,13 +195,13 @@ vModel.play = async ({ canvasElement, step }) => {
 
   await step('Should open on click', async () => {
     userEvent.click(collapses[0])
-    await sleep()
+    await sleep(50)
     expect(collapses[0]).toHaveAttribute('aria-expanded', 'false')
   })
 
   await step('Should close on click', async () => {
     userEvent.click(collapses[1])
-    await sleep()
+    await sleep(50)
     expect(collapses[1]).toHaveAttribute('aria-expanded', 'true')
   })
 }

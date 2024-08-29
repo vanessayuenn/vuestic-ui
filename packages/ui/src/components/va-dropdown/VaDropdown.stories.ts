@@ -81,7 +81,7 @@ Hover.play = async ({ canvasElement, step }) => {
   const target = body.getByTestId('target')!
   await step('Opens on hover', async () => {
     userEvent.hover(target)
-    await sleep()
+    await sleep(50)
     const dropdownContent = body.getByText('Hovered')
     expect(dropdownContent).toBeVisible()
   })
@@ -89,13 +89,13 @@ Hover.play = async ({ canvasElement, step }) => {
     const dropdownContent = body.getByText('Hovered')
     userEvent.unhover(target)
     userEvent.hover(dropdownContent)
-    await sleep()
+    await sleep(50)
     expect(dropdownContent).toBeVisible()
   })
   await step('Dropdown hides on mouse leave', async () => {
     const dropdownContent = body.getByText('Hovered')
     userEvent.unhover(dropdownContent)
-    await sleep()
+    await sleep(50)
     expect(dropdownContent).not.toBeVisible()
   })
 }
@@ -124,11 +124,11 @@ ContentNotHoverable.play = async ({ canvasElement, step }) => {
   const target = body.getByTestId('target')
   await step('Dropdown hides when hover moves to dropdown content', async () => {
     userEvent.hover(target)
-    await sleep()
+    await sleep(50)
     const dropdownContent = body.getByText('Content')
     userEvent.unhover(target)
     userEvent.hover(dropdownContent)
-    await sleep()
+    await sleep(50)
     expect(dropdownContent).not.toBeVisible()
   })
 }

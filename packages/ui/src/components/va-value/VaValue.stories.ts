@@ -34,7 +34,7 @@ Default.play = async ({ canvasElement, step }) => {
 
   await step('and can be reassigned', async () => {
     userEvent.click(button)
-    await sleep()
+    await sleep(50)
     expect(value.innerText).toEqual('true')
   })
 }

@@ -3,11 +3,11 @@ import { sleep } from '../../src/utils/sleep'
 
 export const userEvent = {
   click: async (element: Element, options?: { delay?: number, clientX?: number, clientY?: number, skipPointerEventsCheck?: boolean }) => {
-    const defaultOptions = { delay: 0, skipPointerEventsCheck: false }
+    const defaultOptions = { delay: 0, skipPointerEventsCheck: false, skipHover: true}
     const mergedOptions = { ...defaultOptions, ...options }
-    const { delay, skipPointerEventsCheck } = mergedOptions
+    const { delay } = mergedOptions
 
-    event.click(element, options, { skipHover: true, skipPointerEventsCheck })
+    event.click(element, options)
     // waiting for DOM changes
     await sleep(delay)
   },
