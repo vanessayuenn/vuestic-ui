@@ -27,11 +27,11 @@ async function dragThumbInAxis (element: HTMLElement, options: { clientX?: numbe
   const { clientX, clientY } = mergedOptions
 
   fireEvent.mouseDown(element)
-  await sleep()
+  await sleep(50)
   fireEvent.mouseMove(element, { clientX, clientY })
-  await sleep()
+  await sleep(50)
   fireEvent.mouseUp(element)
-  await sleep()
+  await sleep(50)
 }
 
 function valueToClientX (slider: HTMLElement, element: HTMLElement, newValue: number) {
@@ -79,12 +79,12 @@ Default.play = async ({ step }) => {
   await step('Change value through keyboard navigation', async () => {
     await userEvent.focus(sliderThumb)
     fireEvent.keyDown(sliderThumb, { key: 'ArrowRight' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '76')
 
     fireEvent.keyDown(sliderThumb, { key: 'ArrowLeft' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '75')
   })
@@ -126,12 +126,12 @@ Disabled.play = async ({ step }) => {
 
   await step('Does not change the value for disabled sliders (keyboard)', async () => {
     fireEvent.keyDown(sliderThumb, { key: 'ArrowRight' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '45')
 
     fireEvent.keyDown(sliderThumb, { key: 'ArrowLeft' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '45')
   })
@@ -165,12 +165,12 @@ Readonly.play = async ({ step }) => {
 
   await step('Does not change the value for read-only sliders (keyboard)', async () => {
     fireEvent.keyDown(sliderThumb, { key: 'ArrowRight' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '45')
 
     fireEvent.keyDown(sliderThumb, { key: 'ArrowLeft' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '45')
   })
@@ -215,12 +215,12 @@ Stateful.play = async ({ step }) => {
   await step('Change value through keyboard navigation', async () => {
     await userEvent.focus(sliderThumb)
     fireEvent.keyDown(sliderThumb, { key: 'ArrowRight' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '76')
 
     fireEvent.keyDown(sliderThumb, { key: 'ArrowLeft' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '75')
   })
@@ -263,12 +263,12 @@ Step.play = async ({ step }) => {
   await step('Change value with a step of 5 (keyboard)', async () => {
     await userEvent.focus(sliderThumb)
     fireEvent.keyDown(sliderThumb, { key: 'ArrowRight' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '55')
 
     fireEvent.keyDown(sliderThumb, { key: 'ArrowLeft' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', '50')
   })
@@ -344,7 +344,7 @@ Min.play = async ({ step }) => {
 
   await step(`Minimum value must be ${minValue} (keyboard)`, async () => {
     fireEvent.keyDown(sliderThumb, { key: 'ArrowLeft' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', minValue)
   })
@@ -380,7 +380,7 @@ Max.play = async ({ step }) => {
 
   await step(`Maximum value must be ${maxValue} (keyboard)`, async () => {
     fireEvent.keyDown(sliderThumb, { key: 'ArrowRight' })
-    await sleep()
+    await sleep(50)
 
     expect(slider).toHaveAttribute('aria-valuenow', maxValue)
   })
@@ -557,13 +557,13 @@ DragStartEvent.play = async ({ step }) => {
 
   await step('Fires drag start event', async () => {
     fireEvent.mouseDown(sliderTrack)
-    await sleep()
+    await sleep(50)
 
     let p = document.querySelector('[data-p]') as HTMLElement
     expect(p).toHaveTextContent('Drag start!')
 
     fireEvent.mouseUp(sliderTrack)
-    await sleep()
+    await sleep(50)
 
     p = document.querySelector('[data-p]') as HTMLElement
     expect(p).toBeNull()
@@ -587,10 +587,10 @@ DragEndEvent.play = async ({ step }) => {
     expect(p).toBeNull()
 
     fireEvent.mouseDown(sliderTrack)
-    await sleep()
+    await sleep(50)
 
     fireEvent.mouseUp(sliderTrack)
-    await sleep()
+    await sleep(50)
 
     p = document.querySelector('[data-p]') as HTMLElement
     expect(p).toHaveTextContent('Drag end!')
@@ -632,13 +632,13 @@ Vertical.play = async ({ step }) => {
   await step('Change value through keyboard navigation (vertical)', async () => {
     await userEvent.focus(sliderThumb[0])
     fireEvent.keyDown(sliderThumb[0], { key: 'ArrowDown' })
-    await sleep()
+    await sleep(50)
 
     expect(slider[0]).toHaveAttribute('aria-valuenow', '49')
 
     await userEvent.focus(sliderThumb[0])
     fireEvent.keyDown(sliderThumb[0], { key: 'ArrowUp' })
-    await sleep()
+    await sleep(50)
 
     expect(slider[0]).toHaveAttribute('aria-valuenow', '50')
   })
@@ -654,13 +654,13 @@ Vertical.play = async ({ step }) => {
   await step('Change value with a step of 5 (vertical keyboard)', async () => {
     await userEvent.focus(sliderThumb[1])
     fireEvent.keyDown(sliderThumb[1], { key: 'ArrowUp' })
-    await sleep()
+    await sleep(50)
 
     expect(slider[1]).toHaveAttribute('aria-valuenow', '50')
 
     await userEvent.focus(sliderThumb[1])
     fireEvent.keyDown(sliderThumb[1], { key: 'ArrowDown' })
-    await sleep()
+    await sleep(50)
 
     expect(slider[1]).toHaveAttribute('aria-valuenow', '45')
   })

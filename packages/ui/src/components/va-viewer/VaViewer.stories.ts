@@ -37,7 +37,7 @@ Default.play = async ({ canvasElement, step }) => {
     const beforeClick = document.querySelector('.va-viewer-content')
     expect(beforeClick).toBeNull()
     userEvent.click(viewer)
-    await sleep()
+    await sleep(50)
     const afterClick = document.querySelector('.va-viewer-content')
     expect(afterClick).not.toBeNull()
   })

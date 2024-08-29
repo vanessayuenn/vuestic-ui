@@ -12,7 +12,7 @@ export default {
 const getBacktop = () => document.querySelector<HTMLElement>('.va-backtop')!
 const scroll = async () => {
   window.scrollTo({ top: 400 })
-  await sleep()
+  await sleep(50)
 }
 
 export const Default: StoryFn = () => ({
@@ -121,7 +121,7 @@ ClickEvent.play = async ({ canvasElement, step }) => {
 
   await step('Click triggered', async () => {
     getBacktop()?.click()
-    await sleep()
+    await sleep(50)
     expect(clicked.innerText).toBe('true')
   })
 }
