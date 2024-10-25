@@ -1,6 +1,6 @@
 import { defineConfig, mergeConfig } from 'vitest/config'
 import viteConfig from './vite.config'
-import { storybookTest } from '@storybook/experimental-addon-vitest/plugin'
+import { storybookTest } from '@storybook/experimental-addon-test/vitest-plugin'
 
 export default mergeConfig(
   viteConfig as never,
