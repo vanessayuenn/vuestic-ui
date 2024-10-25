@@ -7,7 +7,7 @@ import { sleep } from '../../utils/sleep'
 export default {
   title: 'VaAccordion',
   component: VaAccordion,
-  tags: ['autodocs'],
+  tags: ['autodocs', 'file-level-tags'],
 }
 
 export const Default: StoryFn = () => ({
@@ -54,6 +54,7 @@ Default.play = async ({ canvasElement, step }) => {
 
 export const Stateful: StoryFn = () => ({
   components: { VaAccordion, VaCollapse },
+  tags: ['!file-level-tags', 'story-level-tags'],
   template: `
     <p>[true] - should open</p>
     <va-accordion>

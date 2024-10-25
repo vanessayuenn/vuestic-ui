@@ -9,6 +9,7 @@ export default {
 
 export const FixedTop: StoryFn = () => ({
   components: { VaAffix },
+  tags: ['story-level-tags'],
   template: `
     <div class="w-1/4">
       <p class="m-1">{{$vb.lorem(100)}}</p>
@@ -31,6 +32,7 @@ FixedTop.play = async ({ canvasElement, step }) => {
 
 export const FixedBottom: StoryFn = () => ({
   components: { VaAffix },
+  tags: ['!dev'],
   template: `
     <div class="w-1/4">
       <p class="m-1">{{$vb.lorem(2500)}}</p>
