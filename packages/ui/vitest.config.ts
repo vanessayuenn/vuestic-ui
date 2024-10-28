@@ -1,6 +1,7 @@
 import { defineConfig, mergeConfig } from 'vitest/config'
 import viteConfig from './vite.config'
 import { storybookTest } from '@storybook/experimental-addon-test/vitest-plugin'
+import { storybookVuePlugin } from '@storybook/vue3-vite/vite-plugin'
 
 export default mergeConfig(
   viteConfig as never,
@@ -9,6 +10,7 @@ export default mergeConfig(
       storybookTest({
         storybookScript: 'yarn storybook --ci',
       }),
+      storybookVuePlugin(),
     ],
     test: {
       exclude: ['./src/**/*.spec.ts'],
@@ -24,7 +26,7 @@ export default mergeConfig(
       },
       // Disabling isolation is faster and similar to how tests are isolated in Storybook itself.
       // Consider removing this, if you have flaky tests.
-      isolate: true,
+      isolate: false,
       setupFiles: ['./.storybook/vitest.setup.ts'],
     },
   }),

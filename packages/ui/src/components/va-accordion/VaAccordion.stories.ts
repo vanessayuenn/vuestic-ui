@@ -54,7 +54,6 @@ Default.play = async ({ canvasElement, step }) => {
 
 export const Stateful: StoryFn = () => ({
   components: { VaAccordion, VaCollapse },
-  tags: ['!file-level-tags', 'story-level-tags'],
   template: `
     <p>[true] - should open</p>
     <va-accordion>
@@ -70,6 +69,8 @@ export const Stateful: StoryFn = () => ({
     </va-accordion>
   `,
 })
+
+Stateful.tags = ['!file-level-tags', 'story-level-tags']
 
 Stateful.play = async ({ canvasElement, step }) => {
   const canvas = within(canvasElement)
